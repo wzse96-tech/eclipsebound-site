@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Eclipsebound</title><style>
+:root { --card: #F3EADA; --edge: #C9B48A; --gold: #E9C46A; --gold-dark: #8A6A1E; --ink: #1E2440; --frame: #141826; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--frame); color: var(--ink); font: 17px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; }
+main { max-width: 760px; margin: 24px auto; padding: 28px 30px; background: var(--card); border: 2px solid var(--edge); border-radius: 16px; }
+h1, h2, h3 { color: var(--gold-dark); line-height: 1.25; }
+h1 { font-size: 2em; margin-top: 0; }
+a { color: #2E5E9C; }
+table { border-collapse: collapse; width: 100%; font-size: .93em; }
+th, td { border: 1px solid var(--edge); padding: 6px 8px; text-align: left; vertical-align: top; }
+blockquote { margin: 0 0 1em; padding: 8px 14px; border-left: 4px solid var(--gold); background: #EADFC8; }
+nav { max-width: 760px; margin: 0 auto; padding: 18px 30px 0; }
+nav a { color: var(--gold); margin-right: 18px; text-decoration: none; }
+footer { max-width: 760px; margin: 0 auto 30px; padding: 0 30px; color: #8E93A8; font-size: .85em; }
+.hero { text-align: center; }
+.corona { width: 120px; height: 120px; margin: 8px auto 18px; border-radius: 50%;
+  background: radial-gradient(circle, #141826 52%, transparent 54%),
+  conic-gradient(#E2552D 0 20%, #2E86C1 0 40%, #3E9B4F 0 60%, #FFD86B 0 80%, #B48CFF 0 100%); }
+.soon { font-weight: 600; color: var(--gold-dark); }
+</style></head>
+<body><nav><a href="index.html">Eclipsebound</a><a href="privacy.html">Privacy</a><a href="support.html">Support</a></nav>
+<main><h1>Privacy Policy — Eclipsebound</h1>
+<p><strong>Effective date:</strong> [launch date] <strong>Who we are:</strong> Quiet Owl Entertainment LLC, [registered address], New York, USA. Contact: support@example.com.</p>
+<blockquote>This page is a draft under review.</blockquote>
+<h2>The short version</h2>
+<p>Eclipsebound is a single-player game. It creates an anonymous player account so your progress can be backed up, stores your game save in the cloud, and nothing else. We don't run ads, we don't sell data, and we don't use third-party analytics or tracking.</p>
+<h2>What we collect and why</h2>
+<table><tr><th>Data</th><th>Why</th><th>Where it goes</th></tr><tr><td><strong>An anonymous player ID</strong> (a random identifier created by Firebase Authentication when you first play)</td><td>To store your save under an account, and so support can find your save if you send us the ID</td><td>Google Firebase (Authentication), US servers</td></tr><tr><td><strong>Your game save</strong> (heroes, progress, settings, play time, the device name it was last played on, and a few one-time progress milestones such as "first summon")</td><td>To back up your progress, restore it on a new device, and resolve conflicts between two devices</td><td>Google Firebase (Cloud Firestore), US servers</td></tr><tr><td><strong>Account link</strong> (only if you choose to link Apple or Google sign-in)</td><td>To let you recover the same account on another device</td><td>Google Firebase; Apple or Google handle the sign-in itself under their own policies</td></tr><tr><td><strong>Purchase receipts</strong> (pack, time, store transaction id; never card details)</td><td>To grant and restore what you bought, and to verify purchases</td><td>Apple / Google issue them; a copy is stored with your save in Google Firebase</td></tr><tr><td><strong>Crash and basic device information</strong> that Apple's App Store or Google Play may share with us</td><td>To fix bugs</td><td>Apple / Google, under their policies; we see it only in aggregate</td></tr></table>
+<p>We do not collect your name, email address, contacts, location, photos, advertising identifier, or anything from other apps. If you email support, we keep that email thread to answer you.</p>
+<h2>What we don't do</h2>
+<ul><li>No advertising, no ad networks, no ad identifiers.</li><li>No third-party analytics or tracking SDKs.</li><li>No selling, renting or sharing of personal data with anyone except the service providers above, who process it only to run the game.</li></ul>
+<h2>In-app purchases</h2>
+<p>Eclipsebound sells Eclipse Crystals and bundles (DESIGN.md §31). Purchases are made through Apple's App Store or Google Play, who handle payment under their own policies; <strong>we never see your payment details</strong>. We receive a purchase receipt (which pack, when, a transaction identifier) to grant the items, to restore your purchases on a new device, and to verify purchases against our records. Receipts are stored with your save. Summons that cost Crystals show their odds in the game.</p>
+<h2>How long we keep it</h2>
+<p>Your account and save stay while you play. <strong>Delete my account</strong> (Settings → Account) deletes the account and the save after a 7-day grace period, during which you can cancel. Old conflict backups are deleted automatically after 30 days.</p>
+<h2>Your choices and rights</h2>
+<ul><li><strong>Play without an account:</strong> the game needs the anonymous account only for cloud backup; if you don't want it, don't sign in to the stores' services and [describe the opt-out if one exists, or remove this line].</li><li><strong>Delete everything:</strong> Settings → Account → Delete my account, or email us your player ID.</li><li><strong>See your data:</strong> email us your player ID and we'll send a copy of your save.</li><li>Depending on where you live (for example the EU/UK under the GDPR, or California under the CCPA), you may have rights to access, correct, delete or restrict the use of your data, and to complain to a regulator. Email us and we'll help.</li></ul>
+<h2>Children</h2>
+<p>Eclipsebound is not directed at children under 13, and we don't knowingly collect personal data from them. The game contains no chat, no user-generated content and no ads. If you believe a child has created an account, contact us and we'll delete it.</p>
+<h2>Where data is stored and transfers</h2>
+<p>Our servers (Google Firebase) are in the United States. If you play from elsewhere, your data is transferred there, protected by the service provider's standard contractual safeguards.</p>
+<h2>Security</h2>
+<p>Data travels encrypted (HTTPS). Server rules let each player read and write only their own save. No system is perfectly secure; if we learn of a breach affecting you we'll tell you as the law requires.</p>
+<h2>Changes</h2>
+<p>We'll post changes here and update the effective date. For material changes, the game will show a notice.</p>
+<h2>Contact</h2>
+<p>Quiet Owl Entertainment LLC · support@example.com · [registered address]</p></main>
+<footer>© Quiet Owl Entertainment LLC · <a href="mailto:support@example.com">support@example.com</a></footer></body></html>
