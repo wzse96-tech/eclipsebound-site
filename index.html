@@ -1,27 +1,175 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Eclipsebound</title><style>
-:root { --card: #F3EADA; --edge: #C9B48A; --gold: #E9C46A; --gold-dark: #8A6A1E; --ink: #1E2440; --frame: #141826; }
-* { box-sizing: border-box; }
-body { margin: 0; background: var(--frame); color: var(--ink); font: 17px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; }
-main { max-width: 760px; margin: 24px auto; padding: 28px 30px; background: var(--card); border: 2px solid var(--edge); border-radius: 16px; }
-h1, h2, h3 { color: var(--gold-dark); line-height: 1.25; }
-h1 { font-size: 2em; margin-top: 0; }
-a { color: #2E5E9C; }
-table { border-collapse: collapse; width: 100%; font-size: .93em; }
-th, td { border: 1px solid var(--edge); padding: 6px 8px; text-align: left; vertical-align: top; }
-blockquote { margin: 0 0 1em; padding: 8px 14px; border-left: 4px solid var(--gold); background: #EADFC8; }
-nav { max-width: 760px; margin: 0 auto; padding: 18px 30px 0; }
-nav a { color: var(--gold); margin-right: 18px; text-decoration: none; }
-footer { max-width: 760px; margin: 0 auto 30px; padding: 0 30px; color: #8E93A8; font-size: .85em; }
-.hero { text-align: center; }
-.corona { width: 120px; height: 120px; margin: 8px auto 18px; border-radius: 50%;
-  background: radial-gradient(circle, #141826 52%, transparent 54%),
-  conic-gradient(#E2552D 0 20%, #2E86C1 0 40%, #3E9B4F 0 60%, #FFD86B 0 80%, #B48CFF 0 100%); }
-.soon { font-weight: 600; color: var(--gold-dark); }
-</style></head>
-<body><nav><a href="index.html">Eclipsebound</a><a href="privacy.html">Privacy</a><a href="support.html">Support</a></nav>
-<main><div class="hero"><div class="corona" role="img" aria-label="The five-moon corona"></div>
-<h1>Eclipsebound</h1><p>A moonlit hero-collecting RPG. Five moons, one eclipse, and the heroes who answer the call.</p><p class="soon">Coming to iOS and Android.</p>
-<p>Questions? <a href="mailto:support@example.com">support@example.com</a></p></div></main>
-<footer>© Quiet Owl Entertainment LLC · <a href="mailto:support@example.com">support@example.com</a></footer></body></html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eclipsebound</title>
+<meta name="description" content="Eclipsebound: a moonlit hero-collecting RPG for iOS and Android. Five moons, one eclipse, and the heroes who answer the call.">
+<meta property="og:title" content="Eclipsebound">
+<meta property="og:description" content="A moonlit hero-collecting RPG. Five moons, one eclipse, and the heroes who answer the call.">
+<meta property="og:image" content="img/kestra_family_awakened.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Nunito:wght@500;700;800&display=swap">
+<style>
+/* Layout: a night frame at top and bottom; the content reads on parchment, like the game's tablets. */
+:root{
+  --night:#141826; --night-2:#1F2436; --parchment:#F6EBD8; --parchment-2:#EADBC2; --card:#FBF4E8;
+  --ink:#1E2440; --muted:#5A5F7A; --gold:#E9C46A; --gold-deep:#8A6A1E; --edge:#D8C39A;
+  --fire:#E2552D; --water:#2E86C1; --nature:#3E9B4F; --light:#E6B93F; --dark:#5B3C8C;
+  --display:"Cinzel","Trajan Pro",Georgia,serif; --body:"Nunito","Segoe UI",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--parchment);color:var(--ink);font:500 17px/1.6 var(--body)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+
+/* top bar */
+.bar{background:var(--night);color:#EDEFF7}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font:700 18px var(--display);letter-spacing:.08em}
+.mark{width:28px;height:28px;border-radius:50%;flex:none;
+  background:radial-gradient(circle,#0B0D16 55%,transparent 57%),conic-gradient(var(--water) 0 20%,var(--fire) 0 40%,var(--nature) 0 60%,#FFD86B 0 80%,#B48CFF 0 100%)}
+.bar nav{display:flex;gap:18px;flex-wrap:wrap;font-weight:700;font-size:15px}
+.bar nav a{text-decoration:none;color:#C9CDE0}
+.bar nav a:hover{color:var(--gold)}
+
+/* hero */
+.hero{background:linear-gradient(180deg,var(--night) 0,var(--night-2) 34%,#3A3350 58%,var(--parchment) 100%);color:#EDEFF7;text-align:center;padding-block:44px 8px}
+.eyebrow{font:700 13px var(--display);letter-spacing:.22em;color:var(--gold);text-transform:uppercase;margin:0 0 10px}
+h1{font:700 clamp(40px,8vw,84px)/1 var(--display);letter-spacing:.06em;margin:0;text-wrap:balance;text-shadow:0 2px 0 #0008}
+h1 .o{display:inline-block;width:.78em;height:.78em;vertical-align:-.04em;border-radius:50%;
+  background:radial-gradient(circle,#0B0D16 56%,transparent 58%),conic-gradient(var(--water) 0 20%,var(--fire) 0 40%,var(--nature) 0 60%,#FFD86B 0 80%,#B48CFF 0 100%);
+  box-shadow:0 0 18px #FFD86B55}
+.lede{max-width:620px;margin:16px auto 22px;font-size:19px;color:#D9DCEB;text-wrap:balance}
+.cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:28px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:10px;font:800 16px var(--body);letter-spacing:.03em;text-decoration:none;border:2px solid var(--gold)}
+.btn.primary{background:var(--gold);color:var(--night);box-shadow:inset 0 -3px 0 var(--gold-deep)}
+.btn.ghost{color:#EDEFF7;background:#ffffff10}
+.btn:focus-visible{outline:3px solid #fff;outline-offset:2px}
+.soon{font-size:14px;color:#B9BED6;margin:-12px 0 26px}
+.art{max-width:1000px;margin:0 auto;border-radius:18px;overflow:hidden;border:2px solid var(--edge);box-shadow:0 18px 40px #14182655}
+
+/* sections */
+section{padding-block:56px}
+h2{font:700 clamp(26px,4vw,36px)/1.15 var(--display);letter-spacing:.03em;margin:0 0 8px;color:var(--gold-deep);text-wrap:balance}
+.sub{color:var(--muted);margin:0 0 28px;max-width:640px}
+.center{text-align:center}.center .sub{margin-inline:auto}
+
+/* five moons */
+.moons{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.moon{background:var(--card);border:1px solid var(--edge);border-radius:14px;padding:16px 12px;text-align:center}
+.moon i{display:block;width:46px;height:46px;margin:0 auto 10px;border-radius:50%;box-shadow:inset -8px -6px 0 #0002}
+.moon b{display:block;font:700 15px var(--display);letter-spacing:.04em}
+.moon span{font-size:13px;color:var(--muted)}
+.wheel{margin-top:16px;font-size:15px;color:var(--muted)}
+
+/* features */
+.features{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.feat{background:var(--card);border:1px solid var(--edge);border-radius:14px;padding:20px}
+.feat h3{font:700 18px var(--display);letter-spacing:.03em;margin:0 0 6px;color:var(--ink)}
+.feat p{margin:0;color:var(--muted);font-size:15.5px}
+
+/* spotlight */
+.spot{display:grid;grid-template-columns:1.25fr 1fr;gap:28px;align-items:center}
+.spot img{border-radius:14px;border:1px solid var(--edge)}
+.names{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chip{padding:5px 11px;border-radius:999px;font-weight:800;font-size:14px;color:#fff}
+
+/* community */
+.community{background:var(--night);color:#EDEFF7}
+.community h2{color:var(--gold)}
+.community .sub{color:#B9BED6}
+
+footer{background:var(--night);color:#8E93A8;font-size:14px;border-top:1px solid #ffffff14}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-block:22px}
+footer a{color:#C9CDE0}
+
+@media (max-width:820px){
+  .features{grid-template-columns:1fr 1fr}
+  .spot{grid-template-columns:1fr}
+  .moons{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media (max-width:520px){
+  .features{grid-template-columns:1fr}
+  .moons{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .bar nav{gap:12px;font-size:14px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="bar"><div class="wrap">
+  <a class="brand" href="#top"><span class="mark" aria-hidden="true"></span>ECLIPSEBOUND</a>
+  <nav><a href="#moons">The Moons</a><a href="#game">The Game</a><a href="#community">Community</a><a href="support.html">Support</a></nav>
+</div></header>
+
+<main id="top">
+  <div class="hero"><div class="wrap">
+    <p class="eyebrow">A moonlit hero-collecting RPG</p>
+    <h1>ECLIPSEB<span class="o" aria-label="O"></span>UND</h1>
+    <p class="lede">Five moons fell. Their light did not. Call heroes from every age, bind them to a moonshard, and lead them through the broken world toward the eclipse.</p>
+    <div class="cta">
+      <a class="btn primary" href="#community">Join the Discord</a>
+      <a class="btn ghost" href="#game">See the game</a>
+    </div>
+    <p class="soon">Coming to iOS and Android.</p>
+    <div class="art"><img src="img/kestra_family_awakened.jpg" width="1624" height="640" alt="Kestra the archer in all five moon elements after awakening: Ashlyn (Fire), Rainne (Water), Thessa (Nature), Aurelie (Light) and Corva (Dark)."></div>
+  </div></div>
+
+  <section id="moons"><div class="wrap center">
+    <h2>Every hero answers one moon</h2>
+    <p class="sub">Each moon has its own color, temper and power. Build a team whose moons cover each other, and the battle tilts your way.</p>
+    <div class="moons">
+      <div class="moon"><i style="background:var(--water)"></i><b>Tide Moon</b><span>Water · patience, healing</span></div>
+      <div class="moon"><i style="background:var(--fire)"></i><b>Ember Moon</b><span>Fire · courage, the forge</span></div>
+      <div class="moon"><i style="background:var(--nature)"></i><b>Verdant Moon</b><span>Nature · growth, endurance</span></div>
+      <div class="moon"><i style="background:#FFD86B"></i><b>Dawn Moon</b><span>Light · hope, protection</span></div>
+      <div class="moon"><i style="background:var(--dark)"></i><b>Dusk Moon</b><span>Dark · dreams, secrets</span></div>
+    </div>
+    <p class="wheel">Water beats Fire, Fire beats Nature, Nature beats Water. Light and Dark each overpower the other.</p>
+  </div></section>
+
+  <section id="game" style="background:var(--parchment-2)"><div class="wrap">
+    <h2>What you'll do</h2>
+    <p class="sub">Turn-based battles you can play by hand or on Auto, a world map of ten regions, and a home that grows with you.</p>
+    <div class="features">
+      <div class="feat"><h3>Collect and awaken</h3><p>Summon heroes, level and ascend them, then awaken them into a new look, a new name and a stronger signature skill.</p></div>
+      <div class="feat"><h3>Battles with timing</h3><p>Speed fills each hero's turn bar. Save a big skill for the boss, strip a shield before your burst, and keep your healer alive.</p></div>
+      <div class="feat"><h3>The Eclipse</h3><p>Summon the eclipse from the Observatory and descend into an endless dungeon where nothing heals between waves.</p></div>
+      <div class="feat"><h3>Moru, your home</h3><p>Build your camp on the back of a gentle sky whale. Your heroes walk around it, and it lights up as you rebuild.</p></div>
+      <div class="feat"><h3>Moonglyphs</h3><p>Socket glyphs in sets, chase the right main stat, and tune a team that's truly yours.</p></div>
+      <div class="feat"><h3>Friends and guilds</h3><p>Send daily gifts, borrow a friend's best hero for tough stages, and take on guild bosses together.</p></div>
+    </div>
+  </div></section>
+
+  <section><div class="wrap spot">
+    <img src="img/kestra_family_base.jpg" width="1624" height="530" loading="lazy" alt="Kestra before awakening, in all five elements.">
+    <div>
+      <h2>Meet Kestra</h2>
+      <p class="sub" style="margin-bottom:0">A young archer with a quick draw and a quicker grin. She answers all five moons, and each awakening gives her a new name.</p>
+      <div class="names">
+        <span class="chip" style="background:var(--fire)">Ashlyn</span>
+        <span class="chip" style="background:var(--water)">Rainne</span>
+        <span class="chip" style="background:var(--nature)">Thessa</span>
+        <span class="chip" style="background:#C89A2E">Aurelie</span>
+        <span class="chip" style="background:var(--dark)">Corva</span>
+      </div>
+    </div>
+  </div></section>
+
+  <section id="community" class="community"><div class="wrap center">
+    <h2>Join the camp early</h2>
+    <p class="sub">Development updates, first looks at new heroes, and a say in what we build next. Come say hello.</p>
+    <div class="cta" style="margin-bottom:0"><a class="btn primary" href="https://discord.gg/4kEXscsuCS">Join the Discord</a></div>
+  </div></section>
+</main>
+
+<footer><div class="wrap">
+  <span>© 2026 Quiet Owl Entertainment LLC</span>
+  <span><a href="privacy.html">Privacy</a> · <a href="support.html">Support</a></span>
+</div></footer>
+</body>
+</html>
